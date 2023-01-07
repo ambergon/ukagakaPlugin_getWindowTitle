@@ -1,7 +1,7 @@
 # GetWindowTitle
-ユーザーが現在開いているウィンドウのタイトルをゴーストが覗けるようになるプラグイン。
-過去に書いた記事のものをプラグイン化しました。
-[【伺か】Ghostからアクションを起こしてほしかったので、ユーザーの画面の覗き込むコードを書いた【yaya】 -- 異風堂々](https://ambergonslibrary.com/ukagaka/7360/)
+ユーザーが現在開いているウィンドウのタイトルをゴーストが覗けるようになるプラグイン。<br>
+過去に書いた記事のものをプラグイン化しました。<br>
+[【伺か】Ghostからアクションを起こしてほしかったので、ユーザーの画面の覗き込むコードを書いた【yaya】 -- 異風堂々](https://ambergonslibrary.com/ukagaka/7360/)<br>
 
 
 ## 動作環境
@@ -11,22 +11,22 @@
 
 ## 使い方
 #### 呼び出し。
-コードが実行されたタイミングで現在トップで表示されているウィンドウ名を取得します。
-ゴーストがトップの場合はゴーストの名前(sakura)が取得されます。
-なので、ユーザーが見つめているかどうかの判定にも使えます。
+コードが実行されたタイミングで現在トップで表示されているウィンドウ名を取得します。<br>
+ゴーストがトップの場合はゴーストの名前(sakura)が取得されます。<br>
+なので、ユーザーが見つめているかどうかの判定にも使えます。<br>
 ```
 "\![raiseplugin,GetWindowTitle,OnGetWindowTitle]"
 ```
 
-また、下記のようにすると少したってから実行されるので、デバッグテストにでもお使いください。
+また、下記のようにすると少したってから実行されるので、デバッグテストにでもお使いください。<br>
 ```
 "\w9\w9\w9\w9\w9\![raiseplugin,GetWindowTitle,OnGetWindowTitle]"
 ```
 
 
 #### ウィンドウタイトルの受け取り
-ゴースト側に下記の関数を実装してください。
-下記の例だと、呼び出しを受けた際にウィンドウタイトル名を読み上げるようになっています。
+ゴースト側に下記の関数を実装してください。<br>
+下記の例だと、呼び出しを受けた際にウィンドウタイトル名を読み上げるようになっています。<br>
 ```
 OnRecieveGetWindowTitle {
     _title = reference[0]
@@ -36,9 +36,9 @@ OnRecieveGetWindowTitle {
 
 
 #### ウィンドウタイトルの受け取りの実装例。
-下記の実装例は、自前ゴーストに導入するつもりだったものの廃案になったものです。
-参考にでもしてください。
-yayaで書かれています。
+下記の実装例は、自前ゴーストに導入するつもりだったものの廃案になったものです。<br>
+参考にでもしてください。<br>
+yayaで書かれています。<br>
 ```
 OnRecieveGetWindowTitle {
     _window_title = reference[0]
@@ -89,23 +89,23 @@ OnRecieveGetWindowTitle {
 
 
 ## お借りしたもの
-yaya.dll
-[Releases · YAYA-shiori/yaya-shiori · GitHub](https://github.com/YAYA-shiori/yaya-shiori/releases)
+yaya.dll<br>
+[Releases · YAYA-shiori/yaya-shiori · GitHub](https://github.com/YAYA-shiori/yaya-shiori/releases)<br>
 
-proxy_ex.dll
-[Release SAORI : proxy_ex v1.0.2 · ukatech/csaori · GitHub](https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2)
+proxy_ex.dll<br>
+[Release SAORI : proxy_ex v1.0.2 · ukatech/csaori · GitHub](https://github.com/ukatech/csaori/releases/tag/saori_proxy_ex_v1.0.2)<br>
 
 
 ## Other
-このプログラムを利用することによるいかなる問題や損害に対して、私は責任を負いません。
-これらをゴースト等に同梱して配布していただいて構いません。
-また、プラグインとしてではなく、ゴースト本体に組み込んでいただいてもかまいません。
+このプログラムを利用することによるいかなる問題や損害に対して、私は責任を負いません。<br>
+これらをゴースト等に同梱して配布していただいて構いません。<br>
+また、プラグインとしてではなく、ゴースト本体に組み込んでいただいてもかまいません。<br>
 
 
 ## 小言
-これを書いた当初はゴーストに可能な限りそこにいる雰囲気を出してくれることを望んでいたのですが、
-迷走した果てに没になりました。
-もしよければ遊んで見てください。
+これを書いた当初はゴーストに可能な限りそこにいる雰囲気を出してくれることを望んでいたのですが、<br>
+迷走した果てに没になりました。<br>
+もしよければ遊んでみてください。<br>
 
 
 
