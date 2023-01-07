@@ -1,0 +1,16 @@
+Charset,UTF-8
+readme.charset,UTF-8
+readme.readme.md
+type,plugin
+name,GetWindowTitle
+
+craftman,ambergon
+filename,yaya.dll
+
+id,40154350-8dd1-11ed-9398-0800200c9a66
+
+secondchangeinterval,0
+otherghosttalk,0
+
+//更新url
+//homeurl,

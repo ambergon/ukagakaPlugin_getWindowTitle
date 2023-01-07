@@ -1,0 +1,36 @@
+//200
+//pluginのエラーは通知が起きない。
+
+
+version {
+	"master/1.0"
+}
+OnPluginLoad.Self {
+}
+
+OnPluginUnload.Self {
+}
+
+
+//使えるキャラクター一覧のメニューを生成する。
+OnMenuExec {
+}
+
+
+
+OnGetWindowTitle {
+    FUNCTIONEX("./dll/proxy_ex.dll" ,  "/charset" , "sjis"  ) 
+    _window_title = FUNCTIONEX( "./dll/proxy_ex.dll" , "./getWindowTitle.exe" ) 
+    res_event = 'OnRecieveGetWindowTitle' 
+    res_reference[0] = _window_title
+}
+
+
+////Ghost Side Code
+//"\![raiseplugin,GetWindowTitle,OnGetWindowTitle]"
+//OnRecieveGetWindowTitle {
+//    _title = reference[0]
+//    _title
+//}
+
+
